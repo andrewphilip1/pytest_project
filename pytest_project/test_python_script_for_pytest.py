@@ -19,7 +19,7 @@ def generate_random_string():
 # parser.add_argument('invalue', type=int, help='Input value for the number of strings to be generated')
 # args = parser.parse_args()
 
-def test_string_generator(invalue):
+def test_string_generator_1(invalue):
     list_of_random_strings = []
     for i in range (int(invalue)):
         list_of_random_strings.append(generate_random_string())
@@ -27,4 +27,12 @@ def test_string_generator(invalue):
     list_of_random_strings.sort()
     logger.info(list_of_random_strings) #similar to printing 
     assert len(list_of_random_strings) == 10
+
+def test_string_generator_2(invalue):
+    try:
+        list_of_random_strings = []
+        for i in range (int(invalue)):
+            list_of_random_strings.append(generate_random_string())
+    except:
+        pass 
     
